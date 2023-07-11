@@ -1,0 +1,61 @@
+.portfolio__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.portfolio__item{
+    background: var(--color-bg-variant);
+    padding: 1.3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.portfolio__item:last-child{
+    grid-column: span 3;
+}
+
+
+
+.portfolio__item:last-child .portfolio__item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.portfolio__item:last-child .portfolio__item-image img {
+    max-width: 40%;
+    height: auto;
+}
+
+
+
+/* rest of your css code... */
+
+/* ------------- Media Queries for Medium Devices ---------------*/
+
+@media screen and (max-width: 1024px){
+    .portfolio__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+
+    .portfolio__item:last-child{
+        grid-column: span 2;
+    }
+}
+
+/* ------------- Media Queries for Small Devices ---------------*/
+
+@media screen and (max-width: 600px){
+    .portfolio__container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .portfolio__item:last-child{
+        grid-column: span 1;
+    }
+}
